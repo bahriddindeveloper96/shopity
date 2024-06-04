@@ -12,7 +12,7 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): ProductResource
     {
         return ProductResource::collection(Product::cursorPaginate(25));
     }
@@ -27,7 +27,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-       return new ProductResource($product->load('stocks'));
+       return Product::with('stocks')->find($product);
     }
 
     /**

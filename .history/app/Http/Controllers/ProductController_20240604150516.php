@@ -27,7 +27,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-       return new ProductResource($product->load('stocks'));
+       return Product::with('stocks')->find($product);
     }
 
     /**

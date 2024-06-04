@@ -23,5 +23,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::apiResources([
     'categories' => CategoryController::class,
     'products' => ProductController::class,
-    'categories.products' => CategoryProductController::class,
+    'category.product' => CategoryProductController::class,
 ]);
