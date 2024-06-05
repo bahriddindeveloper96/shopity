@@ -47,7 +47,7 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Role::class);
     }
-    public function favourites():BelongsToMany
+    public function favourites()
     {
         return $this->belongsToMany(Product::class);
     }

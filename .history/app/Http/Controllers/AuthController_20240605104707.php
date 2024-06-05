@@ -27,10 +27,6 @@ class AuthController extends Controller
     {
 
     }
-    public function logout()
-    {
-        
-    }
     public function user(Request $request)
     {   
         return $request->user();
