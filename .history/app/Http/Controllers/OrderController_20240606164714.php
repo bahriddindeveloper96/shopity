@@ -2,19 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PaymentType;
-use App\Http\Requests\StorePaymentTypeRequest;
-use App\Http\Requests\UpdatePaymentTypeRequest;
-use Illuminate\Database\Eloquent\Collection;
+use App\Models\Order;
+use App\Http\Requests\StoreOrderRequest;
+use App\Http\Requests\UpdateOrderRequest;
 
-class PaymentTypeController extends Controller
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index():Collection
+    public function __construct()
     {
-        return PaymentType::all();
+        $this->middleware('auth:sanctum');  
+    }
+    public function index()
+    {
+        return auth()->user()->orders;
     }
 
     /**
@@ -28,23 +31,23 @@ class PaymentTypeController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StorePaymentTypeRequest $request)
+    public function store(StoreOrderRequest $request)
     {
-        //
+       dd($request);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(PaymentType $paymentType)
+    public function show(Order $order)
     {
-        //
+        
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(PaymentType $paymentType)
+    public function edit(Order $order)
     {
         //
     }
@@ -52,7 +55,7 @@ class PaymentTypeController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdatePaymentTypeRequest $request, PaymentType $paymentType)
+    public function update(UpdateOrderRequest $request, Order $order)
     {
         //
     }
@@ -60,7 +63,7 @@ class PaymentTypeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(PaymentType $paymentType)
+    public function destroy(Order $order)
     {
         //
     }

@@ -52,10 +52,6 @@ class User extends Authenticatable
     {
         return $this->hasMany(UserAddress::class);
     }
-    public function orders():HasMany
-    {
-        return $this->hasMany(Order::class);
-    }
     public function favourites():BelongsToMany
     {
         return $this->belongsToMany(Product::class);

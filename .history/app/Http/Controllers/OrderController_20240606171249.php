@@ -34,7 +34,7 @@ class OrderController extends Controller
      */
     public function store(StoreOrderRequest $request)
     {
-       // dd($request);
+        dd($request);
        $sum = 0;
        $products = Product::query()->limit(2)->get();
        auth()->user()->orders()->create([

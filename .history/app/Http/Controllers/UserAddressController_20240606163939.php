@@ -35,7 +35,6 @@ class UserAddressController extends Controller
        // dd($request->toArray());
        // UserAddress::create($request->toArray());
         auth()->user()->addresses()->create($request->toArray());
-        return true;
     }
 
     /**

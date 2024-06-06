@@ -8,7 +8,6 @@ use App\Http\Controllers\FavouriteController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PaymentTypeController;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\UserAddressController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -37,7 +36,6 @@ Route::apiResources([
     'categories.products' => CategoryProductController::class,
     'favourites' => FavouriteController::class,
     'orders' => OrderController::class,
-    'delivery-method' => DeliveryMethodController::class,
+    'delivery_method' => DeliveryMethodController::class,
     'payment-type' => PaymentTypeController::class,
-    'user-addresses' => UserAddressController::class,
 ]);

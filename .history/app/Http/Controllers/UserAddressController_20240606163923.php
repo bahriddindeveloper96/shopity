@@ -32,10 +32,9 @@ class UserAddressController extends Controller
      */
     public function store(StoreUserAddressRequest $request)
     {
-       // dd($request->toArray());
-       // UserAddress::create($request->toArray());
+        dd($request->toArray());
+        UserAddress::create($request->toArray());
         auth()->user()->addresses()->create($request->toArray());
-        return true;
     }
 
     /**

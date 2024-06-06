@@ -2,19 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PaymentType;
-use App\Http\Requests\StorePaymentTypeRequest;
-use App\Http\Requests\UpdatePaymentTypeRequest;
-use Illuminate\Database\Eloquent\Collection;
+use App\Models\UserAddress;
+use App\Http\Requests\StoreUserAddressRequest;
+use App\Http\Requests\UpdateUserAddressRequest;
 
-class PaymentTypeController extends Controller
+class UserAddressController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index():Collection
+    public function index()
     {
-        return PaymentType::all();
+        UserAddress::all();
     }
 
     /**
@@ -28,7 +27,7 @@ class PaymentTypeController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StorePaymentTypeRequest $request)
+    public function store(StoreUserAddressRequest $request)
     {
         //
     }
@@ -36,7 +35,7 @@ class PaymentTypeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(PaymentType $paymentType)
+    public function show(UserAddress $userAddress)
     {
         //
     }
@@ -44,7 +43,7 @@ class PaymentTypeController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(PaymentType $paymentType)
+    public function edit(UserAddress $userAddress)
     {
         //
     }
@@ -52,7 +51,7 @@ class PaymentTypeController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdatePaymentTypeRequest $request, PaymentType $paymentType)
+    public function update(UpdateUserAddressRequest $request, UserAddress $userAddress)
     {
         //
     }
@@ -60,7 +59,7 @@ class PaymentTypeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(PaymentType $paymentType)
+    public function destroy(UserAddress $userAddress)
     {
         //
     }

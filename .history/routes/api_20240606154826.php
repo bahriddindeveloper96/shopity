@@ -37,7 +37,7 @@ Route::apiResources([
     'categories.products' => CategoryProductController::class,
     'favourites' => FavouriteController::class,
     'orders' => OrderController::class,
-    'delivery-method' => DeliveryMethodController::class,
+    'delivery_method' => DeliveryMethodController::class,
     'payment-type' => PaymentTypeController::class,
     'user-addresses' => UserAddressController::class,
 ]);

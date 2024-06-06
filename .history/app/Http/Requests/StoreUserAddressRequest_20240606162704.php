@@ -27,7 +27,8 @@ class StoreUserAddressRequest extends FormRequest
             'region' => 'required',
             'district' => 'required',
             'street' => 'required',
-            'home' => 'required',            
+            'home' => 'required',
+            'user_id' => 'required',
         ];
     }
 }

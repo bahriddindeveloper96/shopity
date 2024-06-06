@@ -34,18 +34,17 @@ class OrderController extends Controller
      */
     public function store(StoreOrderRequest $request)
     {
-       // dd($request);
        $sum = 0;
        $products = Product::query()->limit(2)->get();
        auth()->user()->orders()->create([
-        'comment' => $request->comment,
-        'delivery_method_id' => $request->delivery_method_id,
-        'payment_type_id' => $request->payment_type_id,
-        'address_id' => $request->address_id,
-        'sum' => $sum,
-        'products' => $products,      
+           'delivery_method_id' => 'required|numeric',
+            'payment_type_id' => 'required|numeric',
+            'products' => 'required',
+            'comment' => 'nullable|max:500',
+            'product.*.product_id' => 'required|numeric',
+            'product.*.stock_id' => 'nullable|numeric',
+            'product.*.quantity' => 'required|numeric', 
        ]);
-       return 'success';
     }
 
     /**

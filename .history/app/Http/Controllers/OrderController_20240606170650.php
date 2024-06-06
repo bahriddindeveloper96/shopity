@@ -37,14 +37,14 @@ class OrderController extends Controller
        // dd($request);
        $sum = 0;
        $products = Product::query()->limit(2)->get();
-       auth()->user()->orders()->create([
-        'comment' => $request->comment,
-        'delivery_method_id' => $request->delivery_method_id,
-        'payment_type_id' => $request->payment_type_id,
-        'address_id' => $request->address_id,
-        'sum' => $sum,
-        'products' => $products,      
-       ]);
+    //    auth()->user()->orders()->create([
+    //         'comment' => $request->comment,
+    //         'delivery_method_id' => $request->delivery_method_id,
+    //         'payment_type_id' => $request->payment_type_id,
+    //         'address_id' =>  $request->address_id,
+    //         'sum' => $sum,
+    //         'products' => $products,      
+    //    ]);
        return 'success';
     }
 
