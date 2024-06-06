@@ -15,6 +15,5 @@ class Order extends Model
         'payment_type_id',
         'sum',
         'products',
-        'address',
     ];
 }

@@ -13,8 +13,5 @@ class Order extends Model
         'comment',
         'delivery_method_id',
         'payment_type_id',
-        'sum',
-        'products',
-        'address',
     ];
 }

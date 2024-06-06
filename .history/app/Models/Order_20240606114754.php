@@ -9,12 +9,6 @@ class Order extends Model
 {
     use HasFactory;
     protected $fillabe = [
-        'user_id',
-        'comment',
-        'delivery_method_id',
-        'payment_type_id',
-        'sum',
-        'products',
-        'address',
+
     ];
 }
