@@ -13,12 +13,8 @@ class Order extends Model
         'comment',
         'delivery_method_id',
         'payment_type_id',
-        'sum',
+        'sum', // 'sum' ni 'comment' dan oldin qo'shing
         'products',
         'address',
-    ];
-    protected $casts = [
-        'products' => 'array',
-        'address' => 'array',
     ];
 }

@@ -8,17 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
-    protected $fillable = [
+        protected $fillable = [
         'user_id',
         'comment',
         'delivery_method_id',
         'payment_type_id',
-        'sum',
+        'sum', // 'sum' ni 'comment' dan oldin qo'shing
         'products',
         'address',
-    ];
-    protected $casts = [
-        'products' => 'array',
-        'address' => 'array',
     ];
 }

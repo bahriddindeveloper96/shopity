@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
-    protected $fillable = [
+    protected $fillabe = [
         'user_id',
         'comment',
         'delivery_method_id',
@@ -16,9 +16,5 @@ class Order extends Model
         'sum',
         'products',
         'address',
-    ];
-    protected $casts = [
-        'products' => 'array',
-        'address' => 'array',
     ];
 }

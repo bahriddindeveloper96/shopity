@@ -18,7 +18,6 @@ class Order extends Model
         'address',
     ];
     protected $casts = [
-        'products' => 'array',
-        'address' => 'array',
+        'products' => 'array', // products maydoni uchun json ko'rinishini belgilang
     ];
 }

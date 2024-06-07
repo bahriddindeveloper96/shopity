@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
-    protected $fillable = [
+    protected $fillabe = [
         'user_id',
         'comment',
         'delivery_method_id',
@@ -17,8 +17,12 @@ class Order extends Model
         'products',
         'address',
     ];
-    protected $casts = [
+     protected $casts = [
         'products' => 'array',
         'address' => 'array',
     ];
+    public function user()
+    {
+        return $this->hasMany(User::class);
+    }
 }
