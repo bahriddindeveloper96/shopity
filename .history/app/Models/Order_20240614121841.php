@@ -22,12 +22,12 @@ class Order extends Model
         'products' => 'array',
         'address' => 'array',
     ];
-    public function deliveryMethod():BelongsTo
+    public function deliveryType():BelongsTo
     {
         return $this->belongsTo(DeliveryMethod::class);
     }
-    public function paymentType()
+    public function paymentMethod()
     {
-        return $this->belongsTo(PaymentType::class);
+        return $this->belongsTo(paymentMethod::class);
     }
 }

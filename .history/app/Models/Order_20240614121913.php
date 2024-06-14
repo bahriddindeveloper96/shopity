@@ -26,7 +26,7 @@ class Order extends Model
     {
         return $this->belongsTo(DeliveryMethod::class);
     }
-    public function paymentType()
+    public function paymentMethod()
     {
         return $this->belongsTo(PaymentType::class);
     }

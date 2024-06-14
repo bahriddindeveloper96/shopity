@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Order extends Model
 {
@@ -22,12 +21,8 @@ class Order extends Model
         'products' => 'array',
         'address' => 'array',
     ];
-    public function deliveryMethod():BelongsTo
+    public function deliveryType()
     {
         return $this->belongsTo(DeliveryMethod::class);
-    }
-    public function paymentType()
-    {
-        return $this->belongsTo(PaymentType::class);
     }
 }
